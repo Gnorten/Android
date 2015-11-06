@@ -39,16 +39,19 @@ public class Game1 extends Game_Activity_1 implements GameListener
         final int SMOOTH_BUFFER_SIZE = 40;
         accelbuffer = FloatBuffer.allocate(SMOOTH_BUFFER_SIZE);
 
+
         ByteBuffer buffer1 = ByteBuffer.allocateDirect( 3 * 4 * 3 );
         buffer1.order(ByteOrder.nativeOrder());
         vertices = buffer1.asFloatBuffer();
-        ByteBuffer buffer1 = ByteBuffer.allocateDirect( 3 * 4 * 3 );
-        buffer1.order(ByteOrder.nativeOrder());
-        vertices1 = buffer1.asFloatBuffer();
-        ByteBuffer buffer1 = ByteBuffer.allocateDirect( 3 * 4 * 3 );
-        buffer1.order(ByteOrder.nativeOrder());
-        vertices2 = buffer1.asFloatBuffer();
-
+        ByteBuffer buffer2 = ByteBuffer.allocateDirect( 3 * 4 * 3 );
+        buffer2.order(ByteOrder.nativeOrder());
+        vertices1 = buffer2.asFloatBuffer();
+        ByteBuffer buffer3 = ByteBuffer.allocateDirect( 3 * 4 * 3 );
+        buffer3.order(ByteOrder.nativeOrder());
+        vertices2 = buffer3.asFloatBuffer();
+        ByteBuffer buffer4 = ByteBuffer.allocateDirect( 3 * 4 * 4 );
+        buffer4.order(ByteOrder.nativeOrder());
+        colors = buffer4.asFloatBuffer();
         vertices.put( -0.5f );
         vertices.put( -0.5f );
         vertices.put( 0 );
@@ -63,22 +66,7 @@ public class Game1 extends Game_Activity_1 implements GameListener
 
         vertices.rewind();
 
-        buffer1 = ByteBuffer.allocateDirect( 3 * 4 * 4 );
-        buffer1.order(ByteOrder.nativeOrder());
-        colors = buffer1.asFloatBuffer();
-//        colors.put( 1 );
-//        colors.put( 0 );
-//        colors.put( 0 );
-//        colors.put( 1 );
-//        colors.put( 0 );
-//        colors.put( 1 );
-//        colors.put( 0 );
-//        colors.put( 1 );
-//        colors.put( 0 );
-//        colors.put( 0 );
-//        colors.put( 1 );
-//        colors.put( 1 );
-//        colors.rewind();
+
     }
 
     public void changevertices()
